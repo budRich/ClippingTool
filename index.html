@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<metacharset="utf-8"><metaname="viewport" content="width=device-width, initial-scale=1">
+		<title>ClippingTool - Good for me, good for you</title>
+		<style type="text/css">
+			body{	margin:40px auto;
+					max-width:650px;
+					line-height:1.6;
+					font-size:18px;
+					color:#444;
+					padding:0 10px;
+					background-color: #EEE }
+			h1,h2,h3{line-height:1.2}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1><em>ClippingTool</em></h1>
+			<aside>A fixed clipboardmanager</aside>
+		</header>
+
+		<h2>With this tool, keeping track of fixed information will be much easier</h2>
+
+		<p><strong>Features:</strong></p>
+
+		<p>That's how much CSS it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a> into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the original perfect-ass website:</p>
+		<ul>
+			<li><a href="#hotkeys">Hotkeys</a></li>
+			<li><em>Still</em> fits on all your shitty screens</li>
+			<li><em>Still</em> looks the same in all your shitty browsers</li>
+			<li>The motherfucker's <em>still</em> accessible to every asshole that visits your site</li>
+			<li>Shit's <em>still</em> legible and gets your fucking point across</li>
+		</ul>
+
+		<h3>ClippingTool, the saga:</h3>
+
+		<p>
+			My dayjob consist of copy/pasting stuff from and to inputboxes. 
+			Ctrl+C, Ctrl+V isn't enough, i needed more clipboards. 
+			I have used various clipboard manager for personal use for years. 
+			But at work i needed a clipboard manager that was more strict.
+			Also, mine and many other workplaces have strict IT rules.
+			To have a clipboard manager approved i had to be sure it didn't save sensetive data anywhere.</p>
+
+		<h2>This is ClippingTool</h2>
+
+		<p>
+			First time you launch clipping tool a windo appears on the left side of the screen.
+			Some inputboxes in the window is numbered 0-9.</p>
+
+		<p>
+			Box 1-9 are the clipboards for this case.
+			At the top of the window is the tab bar, each tab is a case.
+			Box 0 is the command box, from here you can search your notes.
+			Below box 0 is the current note, to the right of that box is a filtered list of notes.</p>
+
+			<p id="hotkeys">When ClippingTool window is active you can use the following hotkeys:</p>
+
+		<strong>Alt+[0-9]:</strong> 
+		Focus box[0-1]<br>
+
+		<strong>Ctrl+S:</strong> 
+		Save current note.<br>
+
+		<strong>Ctrl+T:</strong> 
+		New tab.<br>
+
+		<strong>Ctrl+W:</strong> 
+		Close tab.<br>
+
+		<strong>Ctrl+[1-9]:</strong> 
+		GoTo tab[1-9].<br>
+
+		<hr>
+
+		<p>The hotkeys described below are global and works even if ClippingTool window is hidden.</p>
+
+		<strong>CapsLock:</strong> 
+		Show/Activate ClippingTool window, if it is active, activate the previously activated window.<br>
+
+		<strong>Ctrl+CapsLock:</strong> 
+		Hide ClippingTool window.<br>
+
+		<strong>CapsLock+[0-9]:</strong> 
+		Send content of inputbox[0-9].<br>
+
+		<strong>Shift+CapsLock+[0-9]:</strong> 
+		Set content of inputbox[0-9] to selected text. <br>
+
+		<strong>CapsLock+`:</strong> 
+		Send note. <br>
+
+		<strong>Shift+CapsLock+`:</strong> 
+		Set note to selected text. <br>
+
+
+		<h2>Profiles and notes</h2>
+
+		<p>When you save a note you can choose to make it either global or local.</p>
+
+		<p>If it's local it will be saved in ClippingTool\profiles\%profile%\%folder%\%note% .
+			%profile% %folder% and %note% is set by you. Locally saved notes can only be viewed when it's corresponding profile is open.</p>
+
+		<p>If it's global it will be saved in ClippingTool\global\%folder%\%note% . 
+			%folder% and %note% is set by you. Global notes can be accessed from any profile.</p>
+
+		<p>If a note contains a string thats equal to a box, it will be converted to a template when saved. This means when saving 
+			a note that includes "LeifLoket", that happens to be whats in box2, in this profile: username. Next time this template 
+			is loaded, the value of username will be where the original note said: "LeifLoket". </p>
+
+		<p>A profile is basicly a list of what boxes is to be visible in the window.</p>
+
+		<p>This is how you create a profile:</p>
+		<ul>
+			<li>Create a folder in ClippingTool\profiles\ , the name of the folder is the name of the profile.</li>
+			<li>Create a file named list in this folder.</li>
+			<li>Every line in list, is the name of the corresponding input box.</li>
+			<li>You can set the current profile from the window menu.</li>
+			<li>Hold shift when you create a new tab, to choose profile for the tab.</li>
+		</ul>		
+
+		<h2>Drag for more boxes</h2>
+
+		<p>You can drag "~~~~~~~~~~~~~" down if you need more boxes.</p>
+
+		<h2>ClippingTool is free</h2>
+
+		<p>Below is the sourcecode for ClippingTool. It's written in AutoHotkey. It should work on any windows system with AutoHotkey installed.</p>
+
+		<script src="https://gist.github.com/budRich/4333c21ca3c0a2416576ecbc207ef555.js"></script>
+
+		<hr>
+		<p>ClippingTool was created by budRich, 2016.</p>
+		<p>The design of this website was inspired by http://bettermotherfuckingwebsite.com/ .</a>. 
+
+	</body>
+</html>
