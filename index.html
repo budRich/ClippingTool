@@ -9,49 +9,37 @@
 					max-width:650px;
 					line-height:1.6;
 					font-size:18px;
-					color:#444;
+					color:#DDD;
 					padding:0 10px;
-					background-color: #EEE }
-			h1,h2,h3{line-height:1.2}
+					background-color: #111 }
+			h1,h2,h3{line-height:0.8;
+					color:#AA9000}
 		</style>
 	</head>
 	<body>
 		<header>
 			<h1><em>ClippingTool</em></h1>
-			<aside>A fixed clipboardmanager</aside>
+			<aside>A clipboard manager for fixed systems and Capslock haters everywhere. Written in <a href="https://autohotkey.com/">AutoHotkey</a> by budRich in Athens 2016.</aside>
 		</header>
+		
 
-		<h2>With this tool, keeping track of fixed information will be much easier</h2>
-
-		<p><strong>Features:</strong></p>
-
-		<p>That's how much CSS it took to turn that <a href="http://motherfuckingwebsite.com/">grotesque pile of shit</a> into this easy-to-read masterpiece. It's so fucking simple and it <em>still</em> has all the glory of the original perfect-ass website:</p>
-		<ul>
-			<li><a href="#hotkeys">Hotkeys</a></li>
-			<li><em>Still</em> fits on all your shitty screens</li>
-			<li><em>Still</em> looks the same in all your shitty browsers</li>
-			<li>The motherfucker's <em>still</em> accessible to every asshole that visits your site</li>
-			<li>Shit's <em>still</em> legible and gets your fucking point across</li>
-		</ul>
-
-		<h3>ClippingTool, the saga:</h3>
+		<h2>This is the saga</h2>
 
 		<p>
 			My dayjob consist of copy/pasting stuff from and to inputboxes. 
 			Ctrl+C, Ctrl+V isn't enough, i needed more clipboards. 
-			I have used various clipboard manager for personal use for years. 
-			But at work i needed a clipboard manager that was more strict.
+			I have used various clipboard managers for personal use for years. 
+			But at work i needed a clipboard manager that was more fixed.
 			Also, mine and many other workplaces have strict IT rules.
 			To have a clipboard manager approved i had to be sure it didn't save sensetive data anywhere.</p>
 
 		<h2>This is ClippingTool</h2>
 
 		<p>
-			First time you launch clipping tool a windo appears on the left side of the screen.
-			Some inputboxes in the window is numbered 0-9.</p>
+			First time you launch clipping tool a window appears on the right side of the screen.
+		</p>
 
 		<p>
-			Box 1-9 are the clipboards for this case.
 			At the top of the window is the tab bar, each tab is a case.
 			Box 0 is the command box, from here you can search your notes.
 			Below box 0 is the current note, to the right of that box is a filtered list of notes.</p>
@@ -96,29 +84,29 @@
 		Set note to selected text. <br>
 
 
-		<h2>Profiles and notes</h2>
+		<h2>Layouts and Notes</h2>
 
 		<p>When you save a note you can choose to make it either global or local.</p>
 
-		<p>If it's local it will be saved in ClippingTool\profiles\%profile%\%folder%\%note% .
-			%profile% %folder% and %note% is set by you. Locally saved notes can only be viewed when it's corresponding profile is open.</p>
-
-		<p>If it's global it will be saved in ClippingTool\global\%folder%\%note% . 
-			%folder% and %note% is set by you. Global notes can be accessed from any profile.</p>
+		<p>Notes are saved in:  ClippingTool\Layouts\%layout%\%folder%\%note% .
+			%layout% %folder% and %note% is set by you. Locally saved notes can only be viewed when it's corresponding layout is open.</p>
 
 		<p>If a note contains a string thats equal to a box, it will be converted to a template when saved. This means when saving 
-			a note that includes "LeifLoket", that happens to be whats in box2, in this profile: username. Next time this template 
+			a note that includes "LeifLoket", that happens to be whats in box2, in this layout: username. Next time this template 
 			is loaded, the value of username will be where the original note said: "LeifLoket". </p>
 
-		<p>A profile is basicly a list of what boxes is to be visible in the window.</p>
+		<p>A layout is basicly a list of what boxes is to be visible in the window.</p>
 
-		<p>This is how you create a profile:</p>
+		<p>This is how you create a layout:</p>
 		<ul>
-			<li>Create a folder in ClippingTool\profiles\ , the name of the folder is the name of the profile.</li>
+			<li>Create a folder in ClippingTool\layouts\ , the name of the folder is the name of the layout.</li>
 			<li>Create a file named list in this folder.</li>
 			<li>Every line in list, is the name of the corresponding input box.</li>
-			<li>You can set the current profile from the window menu.</li>
-			<li>Hold shift when you create a new tab, to choose profile for the tab.</li>
+			<li>One can set the height (lines) and width (percentage) by adding (W%width% H%height%) after name declaration.</li>
+			<li>To have multiple boxes on the same line, separate declarations with a comma.</li>
+			<li>To have a new line behave as part of the same group as previous line, start line with a literal comma.</li>
+			<li>You can set the current layout from the window menu.</li>
+			<li>A sample layout is created first time you run the script, study that file.</li>
 		</ul>		
 
 		<h2>Drag for more boxes</h2>
@@ -132,8 +120,7 @@
 		<script src="https://gist.github.com/budRich/4333c21ca3c0a2416576ecbc207ef555.js"></script>
 
 		<hr>
-		<p>ClippingTool was created by budRich, 2016.</p>
-		<p>The design of this website was inspired by http://bettermotherfuckingwebsite.com/ .</a>. 
+		<p>ClippingTool and this page was created by budRich, 2016.</p>
 
 	</body>
 </html>
